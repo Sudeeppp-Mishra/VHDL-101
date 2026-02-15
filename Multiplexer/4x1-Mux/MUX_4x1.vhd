@@ -1,15 +1,15 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity MUX4x1 is
+entity MUX_4x1 is
     port(
         I0, I1, I2, I3 : in std_logic;
         S0, S1        : in std_logic;
         Y             : out std_logic
     );
-end MUX4x1;
+end MUX_4x1;
 
-architecture Behavioral of MUX4x1 is
+architecture Behavioral of MUX_4x1 is
 	 signal sel : std_logic_vector(1 downto 0);
 begin
 	 sel <= (S1 & S0);
